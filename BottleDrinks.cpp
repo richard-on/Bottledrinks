@@ -5,8 +5,8 @@
 #include "BottleDrinks.h"
 
 BottleDrinks::BottleDrinks(std::string bottleDrinkName, double volume) {
-    if(volume < 0){
-        throw std::exception("Volume cannot be less than 0");
+    if(volume <= 0){
+        throw std::exception("Volume cannot be less than or equal 0");
     }
     _volume = volume;
     _bottleDrinkName = bottleDrinkName;
